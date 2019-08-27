@@ -1,3 +1,6 @@
 #!/bin/bash
+set -eo pipefail
 
-exec /opt/app-root/s2i/run
+# Execute the run script from the customised builder.
+
+exec /opt/app-root/builder/run
