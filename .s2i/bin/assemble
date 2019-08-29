@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -eo pipefail
-
+mv /tmp/src/* /opt/app-root/src
 mkdir -p /tmp/.s2i
 mv /tmp/src/builder/ccp.yml /tmp/.s2i/ccp.yml
 mv /tmp/src/builder/passwd.template /tmp/.s2i/passwd.template
