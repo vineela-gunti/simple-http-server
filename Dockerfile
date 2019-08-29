@@ -72,4 +72,4 @@ RUN chown -R 1001:0 /tmp/rabbitmq && chmod -R ug+rwx /tmp/rabbitmq && \
 
 RUN /tmp/scripts/assemble
 
-CMD [ "/opt/app-root/builder/run" ]
+CMD [ "/opt/app-root/s2i/run" ]
