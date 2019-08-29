@@ -70,6 +70,6 @@ RUN chown -R 1001:0 /tmp/rabbitmq && chmod -R ug+rwx /tmp/rabbitmq && \
 
     find /tmp/rabbitmq -type d -exec chmod g+x {} +
 
-#RUN /tmp/scripts/assemble
+RUN /tmp/scripts/assemble
 
 CMD [ "/opt/app-root/builder/run" ]
