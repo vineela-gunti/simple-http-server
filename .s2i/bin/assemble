@@ -4,7 +4,7 @@ set -eo pipefail
 mkdir -p /opt/app-root/src
 mv /tmp/src/* /opt/app-root/src
 mkdir -p /tmp/.s2i
-mv /tmp/src/builder/ccp.yml /tmp/.s2i/ccp.yml
+mv /builder/ccp.yml /tmp/.s2i/ccp.yml
 mv /tmp/src/builder/passwd.template /tmp/.s2i/passwd.template
 mv /tmp/src/builder /opt/app-root/builder
 mv /tmp/src/*.sh /opt/app-root/bin
