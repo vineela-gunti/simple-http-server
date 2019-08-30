@@ -5,9 +5,9 @@
 export USER_ID=$(id -u)
 export GROUP_ID=$(id -g)
 export HOME="/var/lib/rabbitmq"
-envsubst < /tmp/rabbitmq/passwd.template > /tmp/rabbitmq/passwd
+#envsubst < /tmp/rabbitmq/passwd.template > /tmp/rabbitmq/passwd
 export LD_PRELOAD=libnss_wrapper.so
-export NSS_WRAPPER_PASSWD=/tmp/rabbitmq/passwd
+export NSS_WRAPPER_PASSWD=/tmp/rabbitmq/passwd.template
 export NSS_WRAPPER_GROUP=/etc/group
 if [ ! -f /var/lib/rabbitmq/run-rabbitmq-server-firstrun ]; then
 
