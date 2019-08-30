@@ -22,7 +22,7 @@ LABEL io.k8s.description="Rabbitmq Server" \
 
       io.k8s.display-name="Rabbitmq Server" \
 
-      io.openshift.s2i.scripts-url="image:///opt/app-root/builder" \
+      io.openshift.s2i.scripts-url="image:///opt/app-root/s2i" \
 
       io.openshift.expose-services="8080:http" \
 
