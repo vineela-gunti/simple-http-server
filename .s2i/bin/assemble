@@ -1,8 +1,8 @@
 #!/bin/bash
 
 set -eo pipefail
-mkdir -p /opt/app-root/s2i
 
+mkdir -p /opt/app-root/s2i
 
 
 mv /tmp/src/* /opt/app-root/s2i
