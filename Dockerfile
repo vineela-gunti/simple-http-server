@@ -2,12 +2,10 @@ FROM centos:centos7
 
 MAINTAINER The CentOS Project <cloud-ops@centos.org>
 
-USER root
-
 
 COPY . /tmp/src
 
-
+RUN mkdir -p /tmp/scripts
 
 RUN rm -rf /tmp/src/.git* && \
     chown -R 1001 /tmp/src && \
@@ -16,7 +14,7 @@ RUN rm -rf /tmp/src/.git* && \
     rm -rf /tmp/scripts && \
     mv /tmp/src/.s2i/bin /tmp/scripts
 
-USER 1001
+#USER 1001
 
 LABEL io.k8s.description="Rabbitmq Server" \
 
@@ -41,7 +39,6 @@ RUN mkdir -p /tmp/rabbitmq
 RUN /usr/lib/rabbitmq/bin/rabbitmq-plugins enable rabbitmq_management
 
 ADD run-rabbitmq-server.sh /tmp/rabbitmq/run-rabbitmq-server.sh
-
 # Set permissions for openshift run
 RUN chown -R 1001:0 /etc/rabbitmq && chown -R 1001:0 /var/lib/rabbitmq  && chmod -R ug+rw /etc/rabbitmq && \
     chmod -R ug+rw /var/lib/rabbitmq && find /etc/rabbitmq -type d -exec chmod g+x {} + && \
@@ -69,12 +66,16 @@ ADD passwd.template /tmp/rabbitmq/passwd.template
 RUN chown -R 1001:0 /tmp/rabbitmq && chmod -R ug+rwx /tmp/rabbitmq && \
 
     find /tmp/rabbitmq -type d -exec chmod g+x {} +
-
-#RUN /tmp/scripts/assemble
-
 RUN chmod +x /tmp/scripts/assemble
 RUN /tmp/scripts/assemble
 #RUN chmod +x /opt/app-root/s2i/run
 #CMD [ "/opt/app-root/s2i/run" ]
 USER 1001
-#CMD [ "/opt/app-root/s2i/run" ]
+
+#
+
+# entrypoint/cmd for container
+
+#CMD ["/tmp/rabbitmq/run-rabbitmq-server.sh"]
+
+
