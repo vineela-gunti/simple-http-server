@@ -76,6 +76,6 @@ USER 1001
 
 # entrypoint/cmd for container
 
-#CMD ["/tmp/rabbitmq/run-rabbitmq-server.sh"]
+CMD ["/tmp/rabbitmq/run-rabbitmq-server.sh"]
 
 
