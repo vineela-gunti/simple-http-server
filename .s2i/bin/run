@@ -2,6 +2,8 @@
 set -eo pipefail
 
 # Execute the run script from the customised builder.
-chmod +x /opt/app-root/s2i/run
+#chmod +x /opt/app-root/s2i/run
 #exec  /opt/app-root/builder/run
-exec /opt/app-root/s2i/run
+#exec /opt/app-root/s2i/run
+chmod +x /tmp/rabbitmq/run-rabbitmq-server.sh
+CMD ["/tmp/rabbitmq/run-rabbitmq-server.sh"]
