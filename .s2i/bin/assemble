@@ -4,7 +4,7 @@ set -eo pipefail
 
 mkdir -p /opt/app-root/s2i
 
-
+chmod +x /opt/app-root/s2i
 mv /tmp/src/* /opt/app-root/s2i
 #mkdir -p /opt/app-root/src
 #mv /tmp/src/* /opt/app-root/src
