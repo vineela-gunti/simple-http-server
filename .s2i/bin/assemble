@@ -23,4 +23,4 @@ cp -Rf /tmp/src/. ./
 # Fixup permissions on directories and files.
 
 #fix-permissions /opt/app-root
-fix-permissions /opt/app-root/s2i
+#fix-permissions /opt/app-root/s2i
