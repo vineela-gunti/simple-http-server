@@ -1,3 +1,0 @@
-echo " -----> Move rabbitmq server files into place."
-
-mv /tmp/src/* /opt/app-root/src
