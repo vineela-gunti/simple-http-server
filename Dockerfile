@@ -1,5 +1,5 @@
-FROM rabbitmq:3-management
-
+#FROM rabbitmq:3-management
+FROM rabbitmq:3.8-rc
 
 COPY . /tmp/src
 
@@ -33,7 +33,7 @@ LABEL io.k8s.description="Rabbitmq Server" \
 
 #RUN rabbitmq-plugins enable rabbitmq_delayed_message_exchange --offline
 
-FROM rabbitmq:3.8-rc
+
 
 
 
