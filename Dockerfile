@@ -29,11 +29,11 @@ LABEL io.k8s.description="Rabbitmq Server" \
 
 # Add passwd template file for nss_wrapper
 
-RUN chmod +x /tmp/src/.s2i/bin/assemble
-RUN /tmp/src/.s2i/bin/assemble
+#RUN chmod +x /tmp/src/.s2i/bin/assemble
+#RUN /tmp/src/.s2i/bin/assemble
 
-#RUN chmod +x /tmp/scripts/assemble
-#RUN /tmp/scripts/assemble
+RUN chmod +x /tmp/scripts/assemble
+RUN /tmp/scripts/assemble
 #RUN chmod +x /opt/app-root/s2i/run
 #CMD [ "/opt/app-root/s2i/run" ]
 
