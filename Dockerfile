@@ -89,6 +89,7 @@ RUN set -eux; \
 
 #RUN chmod +x /tmp/src/.s2i/bin/assemble
 #RUN /tmp/src/.s2i/bin/assemble
+USER 1001
 
 RUN chmod +x /tmp/scripts/assemble
 RUN /tmp/scripts/assemble
