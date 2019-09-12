@@ -2,11 +2,11 @@
 
 set -eo pipefail
 
-mkdir -p /opt/app-root/s2i
-chmod +x /tmp/src/
-chmod +x /opt/app-root/s2i
+#mkdir -p /opt/app-root/s2i
+#chmod +x /tmp/src/
+#chmod +x /opt/app-root/s2i
 
-mv /tmp/src/* /opt/app-root/s2i
+#mv /tmp/src/* /opt/app-root/s2i
 #mkdir -p /opt/app-root/src
 #mv /tmp/src/* /opt/app-root/src
 #mkdir -p /tmp/.s2i
@@ -23,8 +23,8 @@ mv /tmp/src/* /opt/app-root/s2i
 # Make sure the S2I source directory is empty as we will use the image
 
 # produced to run further S2I builds.
-#cp -Rf /tmp/src/. ./
-#rm -rf /tmp/src
+cp -Rf /tmp/src/. ./
+rm -rf /tmp/src
 
 # Fixup permissions on directories and files.
 
