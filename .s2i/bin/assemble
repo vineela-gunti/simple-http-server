@@ -5,3 +5,4 @@
 #mv /tmp/src/* "$HOME"
 echo "---> Installing application source"
 cp -Rf /tmp/src/. ./
+chmod +x ./
