@@ -2,5 +2,6 @@
 
 
 
-mv /tmp/src/* "$HOME"
-
+#mv /tmp/src/* "$HOME"
+echo "---> Installing application source"
+cp -Rf /tmp/src/. ./
