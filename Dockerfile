@@ -3,7 +3,7 @@ FROM rabbitmq:3.8-rc
 
 COPY . /tmp/src
 
-RUN mkdir -p /tmp/scripts
+#RUN mkdir -p /tmp/scripts
 
 RUN rm -rf /tmp/src/.git* && \
     chown -R 1001 /tmp/src && \
@@ -95,7 +95,7 @@ RUN chmod +x /tmp/scripts/assemble
 RUN /tmp/scripts/assemble
 #RUN chmod +x /opt/app-root/s2i/run
 #CMD [ "/opt/app-root/s2i/run" ]
-
+USER 1001
 
 #
 
