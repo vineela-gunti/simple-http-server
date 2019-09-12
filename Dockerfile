@@ -1,6 +1,6 @@
 #FROM rabbitmq:3-management
 FROM rabbitmq:3.8-rc
-
+USER root
 COPY . /tmp/src
 
 #RUN mkdir -p /tmp/scripts
