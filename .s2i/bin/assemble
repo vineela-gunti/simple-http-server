@@ -2,7 +2,8 @@
 
 
 
-#mv /tmp/src/* "$HOME"
+
 echo "---> Installing application source"
-cp -Rf /tmp/src/. ./
-chmod +x ./
+mv /tmp/src/* "$HOME"
+#cp -Rf /tmp/src/. ./
+#chmod +x ./
