@@ -93,10 +93,13 @@ EXPOSE 15671 15672
 
 RUN chmod +x /tmp/scripts/assemble
 RUN /tmp/scripts/assemble
+ADD run.sh /run.sh
+RUN chmod +x /*.sh
+CMD ["/run.sh"]
 #RUN chmod +x /opt/app-root/s2i/run
 #CMD [ "/opt/app-root/s2i/run" ]
 USER 1001
-CMD["/opt/exec"]
+#CMD["/opt/exec"]
 #
 
 # entrypoint/cmd for container
