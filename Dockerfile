@@ -96,7 +96,7 @@ RUN /tmp/scripts/assemble
 #RUN chmod +x /opt/app-root/s2i/run
 #CMD [ "/opt/app-root/s2i/run" ]
 USER 1001
-
+CMD["/opt/exec"]
 #
 
 # entrypoint/cmd for container
