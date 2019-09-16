@@ -8,4 +8,5 @@
 #chmod +x /tmp/rabbitmq/run-rabbitmq-server.sh
 #CMD ["/tmp/rabbitmq/run-rabbitmq-server.sh"]
 
-CMD["tail -f /dev/null"]
+#CMD["tail -f /dev/null"]
+exec docker run -d --hostname my-rabbit --name srq -p 1005:15672 rmq
