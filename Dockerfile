@@ -160,7 +160,7 @@ RUN /tmp/scripts/assemble
 
 
 
-#USER "rabbitmq"
+USER "rabbitmq"
 
 # CMD "$STI_SCRIPTS_PATH/run"
 
