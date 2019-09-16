@@ -156,19 +156,19 @@ RUN /tmp/scripts/assemble
 
 
 
-COPY ./docker-entrypoint.sh /usr/local/bin/
+#COPY ./docker-entrypoint.sh /usr/local/bin/
 
 
 
-USER "rabbitmq"
+#USER "rabbitmq"
 
 # CMD "$STI_SCRIPTS_PATH/run"
 
 # CMD "/docker-entrypoint.sh"
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+#ENTRYPOINT ["docker-entrypoint.sh"]
 
-CMD ["rabbitmq-server"]
+CMD ["/tmp/scripts/run"]
 
 
 
