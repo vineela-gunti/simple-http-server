@@ -166,9 +166,9 @@ USER "rabbitmq"
 
 # CMD "/docker-entrypoint.sh"
 
-#ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["docker-entrypoint.sh"]
 
-ENTRYPOINT ["/tmp/scripts/run"]
+#ENTRYPOINT ["/tmp/scripts/run"]
 CMD ["rabbitmq-server"]
 
 
