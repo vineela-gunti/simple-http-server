@@ -10,10 +10,8 @@
 set -eo pipefail
 
 # Move assemble/run scripts to new location.
-
-mkdir -p /opt/app-root/s2i
-
-mv /tmp/src/* /opt/app-root/s2i
+echo "---> Installing application source"
+mv /tmp/src/* /opt/app-root/
 
 mkdir -p /tmp/.s2i
 
@@ -25,7 +23,7 @@ cat > /tmp/.s2i/image_metadata.json << EOF
 
   "labels": [
 
-    { "io.openshift.s2i.scripts-url": "image:///opt/app-root/s2i" }
+    { "io.openshift.s2i.scripts-url": "image:///opt/app-root/.s2i" }
 
   ]
 
