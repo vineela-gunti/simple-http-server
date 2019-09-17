@@ -6,7 +6,7 @@
 
     "metadata": {
 
-        "name": "rabbitmq server"
+        "name": "Rabbitmq Server"
 
     },
 
@@ -28,7 +28,7 @@
 
                     "kind": "DockerImage",
 
-                    "name": "openshiftkatacoda/simple-http-server:latest"
+                    "name": "luiscoms/openshift-rabbitmq:management"
 
                 }
 
