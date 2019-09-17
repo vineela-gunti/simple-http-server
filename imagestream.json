@@ -1,0 +1,41 @@
+{
+
+    "kind": "ImageStream",
+
+    "apiVersion": "v1",
+
+    "metadata": {
+
+        "name": "rabbitmq server"
+
+    },
+
+    "spec": {
+
+        "tags": [
+
+            {
+
+                "name": "latest",
+
+                "annotations": {
+
+                    "tags": "builder"
+
+                },
+
+                "from": {
+
+                    "kind": "DockerImage",
+
+                    "name": "openshiftkatacoda/simple-http-server:latest"
+
+                }
+
+            }
+
+        ]
+
+    }
+
+}
