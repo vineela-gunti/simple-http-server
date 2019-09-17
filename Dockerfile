@@ -156,7 +156,7 @@ RUN /tmp/scripts/assemble
 
 
 
-#COPY ./docker-entrypoint.sh /usr/local/bin/
+COPY ./docker-entrypoint.sh /usr/local/bin/
 
 
 
