@@ -15,20 +15,3 @@ mv /tmp/src/* "$HOME"
 #echo "---> Installing application source"
 #mv /tmp/src/* /opt/app-root/src
 
-mkdir -p /tmp/.s2i
-
-
-
-cat > /tmp/.s2i/image_metadata.json << EOF
-
-{
-
-  "labels": [
-
-    { "io.openshift.s2i.scripts-url": "image:///opt/app-root/.s2i" }
-
-  ]
-
-}
-
-EOF
