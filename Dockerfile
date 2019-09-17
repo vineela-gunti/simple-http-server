@@ -41,7 +41,8 @@ RUN ls -la /var/lib/rabbitmq/
 COPY assemble /usr/libexec/s2i/
 
 COPY run /usr/libexec/s2i/
-
+COPY ./docker-entrypoint.sh /usr/local/bin/
 USER "rabbitmq"
+ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["rabbitmq-server"]
 USER 1001
