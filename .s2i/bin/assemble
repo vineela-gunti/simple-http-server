@@ -3,17 +3,17 @@
 
 
 
-#echo "---> Installing application source"
-#mv /tmp/src/* "$HOME"
+echo "---> Installing application source"
+mv /tmp/src/* "$HOME"
 #cp -Rf /tmp/src/. ./
 #chmod +x ./
-set -eo pipefail
+#set -eo pipefail
 
 # Move assemble/run scripts to new location.
 
 #mkdir -p /opt/app-root/s2i
-echo "---> Installing application source"
-mv /tmp/src/* /opt/app-root/src
+#echo "---> Installing application source"
+#mv /tmp/src/* /opt/app-root/src
 
 mkdir -p /tmp/.s2i
 
