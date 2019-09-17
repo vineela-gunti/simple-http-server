@@ -1,2 +1,2 @@
 #!/bin/bash
-exec /opt/app-root/src/run
+exec /usr/libexec/s2i/run
