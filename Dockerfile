@@ -168,8 +168,8 @@ USER "rabbitmq"
 
 #ENTRYPOINT ["docker-entrypoint.sh"]
 
-CMD ["/tmp/scripts/run"]
-
+ENTRYPOINT ["/tmp/scripts/run"]
+CMD ["rabbitmq-server"]
 
 
 USER 1001
