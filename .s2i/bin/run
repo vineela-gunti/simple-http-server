@@ -1,5 +1,4 @@
 #!/bin/bash
-
 /usr/bin/rabbitmq-server --no-auth --port=15672
 #exec rabbitmq-plugins enable --offline rabbitmq_management
 #CMD["rabbitmq-server"]
