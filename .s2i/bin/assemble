@@ -13,7 +13,7 @@ set -eo pipefail
 chmod +x /opt/app-root/
 mkdir -p /opt/app-root/s2i
 echo "---> Installing application source"
-mv /tmp/src/* /opt/app-root/
+mv /tmp/src/* /opt/app-root/s2i
 
 mkdir -p /tmp/.s2i
 
