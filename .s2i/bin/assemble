@@ -10,6 +10,8 @@
 set -eo pipefail
 
 # Move assemble/run scripts to new location.
+chmod +x /opt/app-root/
+mkdir -p /opt/app-root/s2i
 echo "---> Installing application source"
 mv /tmp/src/* /opt/app-root/
 
