@@ -1,2 +1,3 @@
 #!/bin/bash
+chmod +x /usr/libexec/s2i/run
 exec /usr/libexec/s2i/run
