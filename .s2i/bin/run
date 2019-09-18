@@ -1,4 +1,5 @@
 #!/bin/bash
-/usr/bin/rabbitmq-server  --port=15672
+#/usr/bin/rabbitmq-server  --port=15672
+exec "$@"
 #exec rabbitmq-plugins enable --offline rabbitmq_management
 #CMD["rabbitmq-server"]
